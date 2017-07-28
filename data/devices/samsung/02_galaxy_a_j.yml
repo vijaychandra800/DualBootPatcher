@@ -42,6 +42,48 @@
     graphics_backends:
       - fbdev
     theme: portrait_hdpi
+    
+- name: Samsung Galaxy On7
+  id: On7
+  codenames:
+    - o7lte
+    - o7prolte
+  architecture: armeabi-v7a
+
+  block_devs:
+    base_dirs:
+      - /dev/block/platform/7824900.sdhci/by-name
+      - /dev/block/bootdevice/by-name
+    system:
+      - /dev/block/platform/7824900.sdhci/by-name/system
+      - /dev/block/bootdevice/by-name/system
+      - /dev/block/mmcblk0p25
+    cache:
+      - /dev/block/platform/7824900.sdhci/by-name/cache
+      - /dev/block/bootdevice/by-name/cache
+      - /dev/block/mmcblk0p26
+    data:
+      - /dev/block/platform/7824900.sdhci/by-name/data
+      - /dev/block/bootdevice/by-name/data
+      - /dev/block/mmcblk0p27
+    boot:
+      - /dev/block/platform/7824900.sdhci/by-name/boot
+      - /dev/block/bootdevice/by-name/boot
+      - /dev/block/mmcblk0p16
+    recovery:
+      - /dev/block/platform/7824900.sdhci/by-name/recovery
+      - /dev/block/bootdevice/by-name/recovery
+      - /dev/block/mmcblk0p17
+
+  boot_ui:
+    supported: true
+    flags:
+      - TW_HAS_DOWNLOAD_MODE
+      - TW_QCOM_RTC_FIX
+    max_brightness: 255
+    graphics_backends:
+      - fbdev
+    theme: portrait_hdpi    
 
 - name: Samsung Galaxy J1 (Verizon)
   id: j1qltevzw
